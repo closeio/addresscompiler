@@ -6,12 +6,16 @@
 
 ### node.js and AMD
 
-    require('addresscompiler');
+```js
+require('addresscompiler');
+```
 
 ### Global context
 
-    // exposes global variable addresscompiler
-    <script src="addresscompiler.js"></script>
+```html
+<!-- exposes global variable addresscompiler -->
+<script src="addresscompiler.js"></script>
+```
 
 ### addresscompiler.compile
 
@@ -21,43 +25,48 @@ Compiles name-address e-mail addresses into a single string.
 
 A single address:
 
-    addresscompiler.compile({
-        name: "John Smith",
-        address: "john@example.com"
-    });
+```js
+addresscompiler.compile({
+    name: "John Smith",
+    address: "john@example.com"
+});
 
-    // returns
-    'John Smith <john@example.com>'
+// returns
+'John Smith <john@example.com>'
+```
 
 Or a list:
 
-    addresscompiler.compile([{
-        name: "Bach, Sebastian",
-        address: "sebu@example.com"
-    }, {
-        name: "Mozzie",
-        address: "mozart@example.com"
-    }]);
+```js
+addresscompiler.compile([{
+    name: "Bach, Sebastian",
+    address: "sebu@example.com"
+}, {
+    name: "Mozzie",
+    address: "mozart@example.com"
+}]);
 
-    // returns
-    '"Bach, Sebastian" <sebu@example.com>, Mozzie <mozart@example.com>'
-
+// returns
+'"Bach, Sebastian" <sebu@example.com>, Mozzie <mozart@example.com>'
+```
 
 And when using groups
 
-    addresscompiler.compile([{
-        name: "Composers",
-        group: [{
-            address: "sebu@example.com",
-            name: "Bach, Sebastian"
-        }, {
-            address: "mozart@example.com",
-            name: "Mozzie"
-        }]
-    }]);
+```js
+addresscompiler.compile([{
+    name: "Composers",
+    group: [{
+        address: "sebu@example.com",
+        name: "Bach, Sebastian"
+    }, {
+        address: "mozart@example.com",
+        name: "Mozzie"
+    }]
+}]);
 
-    // returns
-    'Composers:"Bach, Sebastian" <sebu@example.com>, Mozzie <mozart@example.com>;'
+// returns
+'Composers:"Bach, Sebastian" <sebu@example.com>, Mozzie <mozart@example.com>;'
+```
 
 ## See also
 
