@@ -1,7 +1,7 @@
 {
     "name": "addresscompiler",
     "version": "0.1.0",
-    "homepage": "https://github.com/elasticsales/addresscompiler",
+    "homepage": "https://github.com/closeio/addresscompiler",
     "description": "Compile rfc2822 address fields",
     "author": "Phil Freo <phil@close.io>",
     "keywords": ["RFC5322", "RFC822", "RFC2822", "address", "compiler", "email"],
@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/elasticsales/addresscompiler.git"
+        "url": "git://github.com/closeio/addresscompiler.git"
     },
     "main": "src/addresscompiler",
     "dependencies": {},
