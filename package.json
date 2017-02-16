@@ -1,9 +1,9 @@
 {
     "name": "addresscompiler",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "homepage": "https://github.com/closeio/addresscompiler",
     "description": "Compile rfc2822 address fields",
-    "author": "Phil Freo <phil@close.io>",
+    "author": "Phil Freo <phil@philfreo.com> (http://philfreo.com/)",
     "keywords": ["RFC5322", "RFC822", "RFC2822", "address", "compiler", "email"],
     "license": "MIT",
     "scripts": {
