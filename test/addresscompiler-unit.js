@@ -125,6 +125,51 @@
                 expect(addresscompiler.compile(input)).to.deep.equal(expected);
             });
 
+            it("should handle comma in name correctly", function() {
+                var input = [{
+                    name: 'My name, My Title',
+                    address: "a@a.com"
+                }];
+                var expected = '"My name, My Title" <a@a.com>';
+                expect(addresscompiler.compile(input)).to.deep.equal(expected);
+            });
+
+            it("should handle semicolon in name correctly", function() {
+                var input = [{
+                    name: 'My name; My Title',
+                    address: "a@a.com"
+                }];
+                var expected = '"My name; My Title" <a@a.com>';
+                expect(addresscompiler.compile(input)).to.deep.equal(expected);
+            });
+
+            it("should handle special charactes in name correctly", function() {
+                var input = [{
+                    name: 'Günther Steiner',
+                    address: "a@a.com"
+                }];
+                var expected = '"Günther Steiner" <a@a.com>';
+                expect(addresscompiler.compile(input)).to.deep.equal(expected);
+            });
+
+            it("should handle special charactes with comma in name correctly", function() {
+                var input = [{
+                    name: 'Günther Steiner, Geschäftsführender',
+                    address: "a@a.com"
+                }];
+                var expected = '"Günther Steiner, Geschäftsführender" <a@a.com>';
+                expect(addresscompiler.compile(input)).to.deep.equal(expected);
+            });
+
+            it("should handle special charactes with semicolon in name correctly", function() {
+                var input = [{
+                    name: 'Günther Steiner; Geschäftsführender',
+                    address: "a@a.com"
+                }];
+                var expected = '"Günther Steiner; Geschäftsführender" <a@a.com>';
+                expect(addresscompiler.compile(input)).to.deep.equal(expected);
+            });
+
         });
     });
 }));

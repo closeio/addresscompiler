@@ -64,10 +64,8 @@
      * @returns {String} Mime word encoded string if needed
      */
     addresscompiler._encodeAddressName = function(name) {
-        if (!/^[\w ']*$/.test(name)) {
-            if (/^[\x20-\x7e]*$/.test(name)) {
-                return '"' + name.replace(/([\\"])/g, '\\$1') + '"';
-            }
+        if (!/^[\w ']*$/.test(name) && /^[\x00-\x7F\xA0-\xFF]*$/.test(name)) {
+            return '"' + name.replace(/([\\"])/g, '\\$1') + '"';
         }
         return name;
     };
