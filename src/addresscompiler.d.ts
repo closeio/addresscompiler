@@ -1,7 +1,7 @@
 declare module "addresscompiler" {
   export type Item = Address | Group;
 
-  type Address = {
+  export interface Address {
     name?: string | null;
     address: string;
   };
