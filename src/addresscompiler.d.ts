@@ -1,5 +1,5 @@
 declare module "addresscompiler" {
-  type Item = Address | Group;
+  export type Item = Address | Group;
 
   type Address = {
     name?: string | null;
