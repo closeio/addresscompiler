@@ -6,7 +6,7 @@ declare module "addresscompiler" {
     address: string;
   };
 
-  type Group = {
+  export interface Group {
     name: string;
     group: Array<Address>;
   };
