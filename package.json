@@ -1,6 +1,6 @@
 {
   "name": "addresscompiler",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "homepage": "https://github.com/closeio/addresscompiler",
   "description": "Compile rfc2822 address fields",
   "author": "Phil Freo <phil@philfreo.com> (http://philfreo.com/)",
